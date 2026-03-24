@@ -55,20 +55,49 @@ The script prints the final image URL to stdout and progress info to stderr.
 
 ---
 
-## Token setup
+## About Neta
 
-The script looks for your `NETA_TOKEN` in this order:
+[Neta](https://www.neta.art/) (by TalesofAI) is an AI image and video generation platform with a powerful open API. It uses a **credit-based system (AP — Action Points)** where each image generation costs a small number of credits. Subscriptions are available for heavier usage.
 
-1. `--token` CLI flag
-2. `NETA_TOKEN` environment variable
-3. `~/.openclaw/workspace/.env` (line matching `NETA_TOKEN=...`)
-4. `~/developer/clawhouse/.env` (line matching `NETA_TOKEN=...`)
+### Register & Get Token
 
-**Recommended:** add to your workspace env file:
+| Region | Sign up | Get API token |
+|--------|---------|---------------|
+| Global | [neta.art](https://www.neta.art/) | [neta.art/open](https://www.neta.art/open/) |
+| China  | [nieta.art](https://app.nieta.art/) | [nieta.art/security](https://app.nieta.art/security) |
+
+New accounts receive free credits to get started. No credit card required to try.
+
+### Pricing
+
+Neta uses a pay-per-generation credit model. View current plans on the [pricing page](https://www.neta.art/pricing).
+
+- **Free tier:** limited credits on signup — enough to test
+- **Subscription:** monthly AP allowance via Stripe
+- **Credit packs:** one-time top-up as needed
+
+### Set up your token
 
 ```bash
-echo "NETA_TOKEN=your_token_here" >> ~/.openclaw/workspace/.env
+# Step 1 — get your token:
+#   Global: https://www.neta.art/open/
+#   China:  https://app.nieta.art/security
+
+# Step 2 — set it
+export NETA_TOKEN=your_token_here
+
+# Step 3 — run
+node furryart.js "your prompt"
 ```
+
+Or pass it inline:
+```bash
+node furryart.js "your prompt" --token your_token_here
+```
+
+> **API endpoint:** defaults to `api.talesofai.cn` (works with all token types).  
+> Override with `NETA_API_URL=https://api.talesofai.cn` if using a global Open Platform token.
+
 
 ---
 
@@ -91,14 +120,4 @@ https://cdn.talesofai.cn/artifacts/abc123.png
 
 ---
 
-Built with Claude Code · Powered by Neta
-
-## Example Output
-
-```bash
-node furryart.js "anthropomorphic animal character, furry art style, detailed fur texture, expressive eyes, vibrant colors, clean linework, digital illustration"
-```
-
-![Example output](https://oss.talesofai.cn/picture/7312ff44-8e15-4c55-b3dd-f6c1b248834e.webp)
-
-> Prompt: *"anthropomorphic animal character, furry art style, detailed fur texture, expressive eyes, vibrant colors, clean linework, digital illustration"*
+Built with [Claude Code](https://claude.ai/claude-code) · Powered by [Neta](https://www.neta.art/) · [Open Portal](https://www.neta.art/open/)
