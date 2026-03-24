@@ -92,3 +92,13 @@ https://cdn.talesofai.cn/artifacts/abc123.png
 ---
 
 Built with Claude Code · Powered by Neta
+
+## Example Output
+
+```bash
+node furryart.js "anthropomorphic animal character, furry art style, detailed fur texture, expressive eyes, vibrant colors, clean linework, digital illustration"
+```
+
+![Example output](https://oss.talesofai.cn/picture/7312ff44-8e15-4c55-b3dd-f6c1b248834e.webp)
+
+> Prompt: *"anthropomorphic animal character, furry art style, detailed fur texture, expressive eyes, vibrant colors, clean linework, digital illustration"*
