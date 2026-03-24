@@ -1,0 +1,94 @@
+# Furry Art Generator
+
+Generate stunning **furry art generator ai** images from a text prompt — powered by the Neta talesofai API. Get back a direct image URL in seconds.
+
+---
+
+## Install
+
+```bash
+# Via npx skills
+npx skills add omactiengartelle/furry-art-skill
+
+# Via ClawHub
+clawhub install furry-art-skill
+```
+
+---
+
+## Usage
+
+```bash
+# Basic — uses built-in default prompt
+node furryart.js
+
+# Custom prompt
+node furryart.js "red fox warrior in armor, fantasy setting, detailed fur"
+
+# Specify size
+node furryart.js "wolf mage casting spells" --size portrait
+
+# Reference an existing image for style inheritance
+node furryart.js "same character, different pose" --ref <picture_uuid>
+```
+
+The script prints the final image URL to stdout and progress info to stderr.
+
+---
+
+## Options
+
+| Flag | Values | Default | Description |
+|------|--------|---------|-------------|
+| `--size` | `square`, `portrait`, `landscape`, `tall` | `square` | Output image dimensions |
+| `--token` | string | — | Override the API token for this run |
+| `--ref` | picture_uuid | — | Inherit style/params from an existing image |
+
+### Size dimensions
+
+| Name | Width | Height |
+|------|-------|--------|
+| `square` | 1024 | 1024 |
+| `portrait` | 832 | 1216 |
+| `landscape` | 1216 | 832 |
+| `tall` | 704 | 1408 |
+
+---
+
+## Token setup
+
+The script looks for your `NETA_TOKEN` in this order:
+
+1. `--token` CLI flag
+2. `NETA_TOKEN` environment variable
+3. `~/.openclaw/workspace/.env` (line matching `NETA_TOKEN=...`)
+4. `~/developer/clawhouse/.env` (line matching `NETA_TOKEN=...`)
+
+**Recommended:** add to your workspace env file:
+
+```bash
+echo "NETA_TOKEN=your_token_here" >> ~/.openclaw/workspace/.env
+```
+
+---
+
+## Default prompt
+
+When no prompt is provided, the skill uses:
+
+> anthropomorphic animal character, furry art style, detailed fur texture, expressive eyes, vibrant colors, clean linework, digital illustration
+
+---
+
+## Example output
+
+```
+Submitting: "red fox knight in enchanted forest" [square 1024×1024]
+Task: abc123-def456-...
+Waiting… attempt 3/90 [PENDING]
+https://cdn.talesofai.cn/artifacts/abc123.png
+```
+
+---
+
+Built with Claude Code · Powered by Neta
