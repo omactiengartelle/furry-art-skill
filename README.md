@@ -55,6 +55,12 @@ The script prints the final image URL to stdout and progress info to stderr.
 
 ---
 
+## Example Output
+
+![Generated example](https://oss.talesofai.cn/picture/7312ff44-8e15-4c55-b3dd-f6c1b248834e.webp)
+
+---
+
 ## About Neta
 
 [Neta](https://www.neta.art/) (by TalesofAI) is an AI image and video generation platform with a powerful open API. It uses a **credit-based system (AP — Action Points)** where each image generation costs a small number of credits. Subscriptions are available for heavier usage.
@@ -98,7 +104,6 @@ node furryart.js "your prompt" --token your_token_here
 > **API endpoint:** defaults to `api.talesofai.com` (Open Platform tokens).  
 > China users: set `NETA_API_BASE_URL=https://api.talesofai.com` to use the China endpoint.
 
-
 ---
 
 ## Default prompt
@@ -118,6 +123,3 @@ Waiting… attempt 3/90 [PENDING]
 https://cdn.talesofai.cn/artifacts/abc123.png
 ```
 
----
-
-Built with [Claude Code](https://claude.ai/claude-code) · Powered by [Neta](https://www.neta.art/) · [Open Portal](https://www.neta.art/open/)
