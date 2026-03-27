@@ -59,17 +59,13 @@ The script prints the final image URL to stdout and progress info to stderr.
 
 ## Token setup
 
-The script looks for your `NETA_TOKEN` in this order:
+This skill requires a Neta API token (free trial available at <https://www.neta.art/open/>).
 
-1. `--token` CLI flag
-2. `NETA_TOKEN` environment variable
-
-**Recommended:** add to your workspace env file:
+Pass it via the `--token` flag:
 
 ```bash
+node <script> "your prompt" --token YOUR_TOKEN
 ```
-
----
 
 ## Default prompt
 
