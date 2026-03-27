@@ -1,5 +1,7 @@
 # Furry Art Generator
 
+> Powered by the **Neta AI image generation API** (`api.talesofai.com`) — the same service as [neta.art](https://www.neta.art/open/).
+
 Generate stunning **furry art generator ai** images from a text prompt — powered by the Neta talesofai API. Get back a direct image URL in seconds.
 
 ---
@@ -89,3 +91,7 @@ https://cdn.talesofai.cn/artifacts/abc123.png
 ## Example Output
 
 ![Generated example](https://oss.talesofai.cn/picture/7312ff44-8e15-4c55-b3dd-f6c1b248834e.webp)
+
+---
+
+This skill requires a Neta API token (free trial available at https://www.neta.art/open/).
